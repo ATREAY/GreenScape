@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="icon" href="./img/t_logo-f9ae6688.png" type="image/png">
+    <script type="module" crossorigin src="./assets/signout.js"></script>
+    <title>GreenScape</title>
+</head>
+<body class="bg-white md:mx-48 scrollbar-hide">
+    <!-- component -->
+    <div class="min-h-screen bg-white min-w-screen">
+        <!-- Header Menu Center -->
+        <header class="w-full bg-red text-gray-700 bg-white border-t border-gray-100 shadow-sm body-font">
+            <div class="w-full container flex flex-col items-start justify-between p-6 mx-auto md:flex-row">
+                <nav class="w-full bg-white border-gray-200 shadow-md rounded-lg">
+                    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-3">
+                        <a href="./index.html" class="flex items-center">
+                            <img src="./img/logo-c141805f.png" class="h-20 mr-3" alt="GreenScape Logo" />
+                            
+                        </a>
+                        <button id="userSignOut" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                  Sign out
+                </button>
+                    </div>
+                
+            </div>
+        </header>
+        <!-- component -->
+        <div class="py-5 bg-white">
+            <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6 mt-8">
+                <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+                    <div class="md:5/12 lg:w-5/12">
+                        <img src="./img/anime-plant.gif" alt="image"
+                            loading="lazy" width="" height="" />
+                    </div>
+                    <div class="md:7/12 lg:w-6/12">
+                        <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+                            Know Everything about plant with GreenScape
+                        </h2>
+                        <p class="mt-6 text-gray-600">
+                            Your personalized plant guide for indoor or outdoor greenery. We've got the perfect match from soil to sun!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class=" py-5 bg-white mt-5">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                    
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
+                        </svg>
+                    </div>
+                    <input type="search" id="myText"
+                        class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Enter Name..." required>
+                </div>
+        </div>
+        
+        <div class="flex rounded-md shadow-sm items-center justify-center" role="group">
+            <button type="button" id="idcli" onclick="Climate()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            Climate
+            </button>
+            <button type="button" id="idori" onclick="Origin()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            Region
+            </button>
+            <button type="button" id="idcat" onclick="Category()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            Plant Type
+            </button>
+        </div>
+  
+        <div id="div" class="relative overflow-x-auto shadow-md sm:rounded-lg" style="visibility: hidden;">
+            <table id="demo" class="styled-table">
+            </table>
+        </div>
+        <script src="./assets/v1.js"></script>
+		
+        
+        <script>
+            const btn = document.getElementById('idcli');
+            const btn1 = document.getElementById('idori');
+            const btn2 = document.getElementById('idcat');
+            const box = document.getElementById('div');
+
+            btn.addEventListener('click', () => {
+            
+            box.style.visibility = 'visible';
+            });
+            btn1.addEventListener('click', () => {
+            
+            box.style.visibility = 'visible';
+            });
+            btn2.addEventListener('click', () => {
+            
+            box.style.visibility = 'visible';
+            });
+        </script>
+        
+</body>
+<script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+</html>
