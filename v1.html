@@ -1,107 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="icon" href="./img/t_logo-f9ae6688.png" type="image/png">
-    <script type="module" crossorigin src="./assets/signout.js"></script>
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
     <title>GreenScape</title>
-</head>
-<body class="bg-white md:mx-48 scrollbar-hide">
-    <!-- component -->
-    <div class="min-h-screen bg-white min-w-screen">
-        <!-- Header Menu Center -->
-        <header class="w-full bg-red text-gray-700 bg-white border-t border-gray-100 shadow-sm body-font">
-            <div class="w-full container flex flex-col items-start justify-between p-6 mx-auto md:flex-row">
-                <nav class="w-full bg-white border-gray-200 shadow-md rounded-lg">
-                    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-3">
-                        <a href="./index.html" class="flex items-center">
-                            <img src="./img/logo-c141805f.png" class="h-20 mr-3" alt="GreenScape Logo" />
-                            
-                        </a>
-                        <button id="userSignOut" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                  Sign out
-                </button>
-                    </div>
-                
-            </div>
-        </header>
-        <!-- component -->
-        <div class="py-5 bg-white">
-            <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6 mt-8">
-                <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-                    <div class="md:5/12 lg:w-5/12">
-                        <img src="./img/anime-plant.gif" alt="image"
-                            loading="lazy" width="" height="" />
-                    </div>
-                    <div class="md:7/12 lg:w-6/12">
-                        <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
-                            Know Everything about plant with GreenScape
-                        </h2>
-                        <p class="mt-6 text-gray-600">
-                            Your personalized plant guide for indoor or outdoor greenery. We've got the perfect match from soil to sun!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Search Bar -->
-        <div class=" py-5 bg-white mt-5">
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    
-                <div class="relative w-full">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
-                        </svg>
-                    </div>
-                    <input type="search" id="myText"
-                        class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Enter Name..." required>
-                </div>
-        </div>
-        
-        <div class="flex rounded-md shadow-sm items-center justify-center" role="group">
-            <button type="button" id="idcli" onclick="Climate()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-            Climate
-            </button>
-            <button type="button" id="idori" onclick="Origin()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-            Region
-            </button>
-            <button type="button" id="idcat" onclick="Category()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-            Plant Type
-            </button>
-        </div>
-  
-        <div id="div" class="relative overflow-x-auto shadow-md sm:rounded-lg" style="visibility: hidden;">
-            <table id="demo" class="styled-table">
-            </table>
-        </div>
-        <script src="./assets/v1.js"></script>
-		
-        
-        <script>
-            const btn = document.getElementById('idcli');
-            const btn1 = document.getElementById('idori');
-            const btn2 = document.getElementById('idcat');
-            const box = document.getElementById('div');
+  </head>
 
-            btn.addEventListener('click', () => {
-            
-            box.style.visibility = 'visible';
-            });
-            btn1.addEventListener('click', () => {
-            
-            box.style.visibility = 'visible';
-            });
-            btn2.addEventListener('click', () => {
-            
-            box.style.visibility = 'visible';
-            });
-        </script>
+  <body class="bg-backg  dark:bg-slate-800">
+    <!-- Nav -->
+    <nav class="bg-backg dark:bg-slate-800 md:mx-36 xl:mx-36">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
+      >
+        <a href="#" class="flex items-center">
+          <img src="./images/logo.png" class="h-20 mr-3" alt=" Logo" />
+        </a>
+
+        <div class="flex items-center md:order-2">
+          <button
+            type="button"
+            class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-goldyellow dark:focus:ring-goldyellow"
+            id="user-menu-button"
+            aria-expanded="false"
+            data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom"
+          >
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="w-8 h-8 rounded-full"
+              src="./images/man.png"
+              alt="user photo"
+            />
+          </button>
+          <!-- Dropdown menu -->
+          <div 
+            class="z-50 hidden my-4 text-base list-none bg-backg dark:bg-slate-800 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+            id="user-dropdown"
+          >
+            <div class="px-4 py-3">
+              <span id="userName" class="block  text-slate-950 dark:text-backg"
+                ></span
+              >
+              <span id="userEmail" class="block text-slate-950 truncate dark:text-backg"
+                ></span
+              >
+            </div>
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li id="userSignOut">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-backg dark:hover:text-goldyellow dark:hover:font-semibold"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            data-collapse-toggle="navbar-user"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+            aria-controls="navbar-user"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="content-center justify-between hidden w-full md:mr-28 md:flex md:w-auto md:order-1"
+          id="navbar-user"
+        >
+          <ul
+            class="flex flex-col font-medium md:p-4 md:mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:border-0 bg-transparent dark:bg-slate-800 md:dark:bg-gray-900"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-goldyellow rounded md:bg-transparent md:text-goldyellow md:p-0 md:dark:text-goldyellow"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://greenscape.notion.site/GreenScape-User-Manual-2a0a9551980744eeb034b2b9d0fc3284"
+                class="block py-2 pl-3 pr-4 dark:text-backg rounded hover:bg-goldyellow md:hover:bg-transparent md:hover:text-goldyellow md:p-0 dark:text-gray-900 md:dark:hover:text-goldyellow dark:hover:bg-gray-700 dark:hover:text-goldyellow md:dark:hover:bg-transparent"
+                >Manual</a
+              >
+            </li>
+            <li>
+              <button
+                id="theme-toggle"
+                type="button"
+                class="text-sm xl:p-0.5 xl:mt-0 xl:ml-2 ml-2 mt-1 md:mr-0 dark:text-white"
+              >
+                <svg
+                  id="theme-toggle-dark-icon"
+                  class="hidden w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+                <svg
+                  id="theme-toggle-light-icon"
+                  class="hidden w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav -->
+
+    <!-- component -->
+    <section class="bg-backg dark:bg-slate-800 xl:mt-28 md:mx-36 xl:mx-36">
+      <div class="px-12 mx-auto max-w-7xl">
+        <div
+          class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center"
+        >
+          <h1
+            class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent"
+          >
+            <span class="block w-full py-2 bg-clip-text leading-12 lg:inline"
+              >Know Everything about
+            </span>
+            <span class="">plant with </span
+            ><span class="text-goldyellow"> Green Scape</span>
+          </h1>
+
+          <p
+            class="dark:text-backg px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24"
+          >
+            Your personalized plant guide for indoor or outdoor greenery. We've
+            got the perfect match from soil to sun!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Search Menu -->
+    <div class="md:mx-36 xl:mx-36 flex-col justify-center space-y-16 bg-backg dark:bg-slate-800">
+      <div class="xl:mt-20 flex justify-center space-x-10">
+        <div id="idcli" class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  transform transition duration-500 hover:scale-105 cursor-pointer dark:shadow dark:shadow-goldyellow">
+          <div class="border-b-2 border-[#0000002d] dark:border-[#8787872d] px-6 py-3 dark:text-backg ">
+            Climate
+          </div>
+            <p class=" p-6 text-base dark:text-backg ">
+              Discover green companions tailored to your weather.
+            </p>
+        </div>
+
+        <div id="idreg" class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  transform transition duration-500 hover:scale-105 cursor-pointer dark:shadow dark:shadow-goldyellow">
+          <div class="border-b-2 border-[#0000002d] dark:border-[#8787872d] px-6 py-3 dark:text-backg ">
+            Region
+          </div>
+            <p class=" p-6 text-base dark:text-backg ">
+              Find the perfect plants suited to your locale.
+            </p>
+        </div>
+
+        <div id="idpt" class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  transform transition duration-500 hover:scale-105 cursor-pointer dark:shadow dark:shadow-goldyellow">
+          <div class="border-b-2 border-[#0000002d] dark:border-[#8787872d] px-6 py-3 dark:text-backg ">
+            Plant Type
+          </div>
+            <p class=" p-6 text-base dark:text-backg ">
+              Explore plants that match your style and space.
+            </p>
+        </div>
+      </div>
+      
+                <!-- Climate Search -->
+      <div class="xl:mt-20  flex  justify-center space-x-5 ">
+        <div class="flex  space-x-24">
+          <div id="idclidrop" class=" relative h-10 w-72 min-w-[200px]" style="visibility: hidden" >
+            <select id="opcli" class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 text-black placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-goldyellow focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+              <option value="tropical">Tropical</option>
+              <option value="subtropical">Sub-Tropical</option>
+              <option value="aridtropical">Arid Tropical</option>
+              <option value="humidtropical">Humid Tropical</option>
+            </select>
+            <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-goldyellow peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-goldyellow peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-goldyellow peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+              Select a Climate
+            </label>
+          </div>
+          <div id="rdbtncli" class=" relative -mb-2" style="visibility: hidden" >
+            <button id="resbtncli" type="submit" onclick="Climate()" class=" text-black absolute right-2.5 bottom-2.5 bg-goldyellow  hover:bg-yellow-300  font-medium rounded-lg dark:text-backg text-sm px-4 py-2 dark:bg-goldyellow dark:hover:bg-yellow-300">Search</button>
+          </div>
+        </div>
+        <!-- Climate Search end -->
+        <!-- Region Search -->
+        <div class="flex  space-x-24 ml-10">
+          <div id="idregdrop" class=" relative h-10 w-72 min-w-[200px]" style="visibility: hidden">
+          <select id="opreg" class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 text-black placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-goldyellow focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+            <option value="africa">Africa</option>
+            <option value="asia">Asia</option>
+            <option value="brazil">Brazil</option>
+            <option value="canaries">Canaries</option>
+            <option value="centralamerica">Central America</option>
+            <option value="tropical">Central Mexico</option>
+            <option value="china">China</option>
+            <option value="colombo">Colombo</option>
+            <option value="costarica">Costa Rica</option>
+            <option value="cultivar">Cultivar</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="india">India</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="java">Java</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="madagascar">Madagascar</option>
+            <option value="mexico">Mexico</option>
+            <option value="philippines">Philippines</option>
+            <option value="southafrica">South Africa</option>
+            <option value="southpacific">South Pacific</option>
+            <option value="taiwan">Taiwan</option>
+            <option value="venezuela">Venezuela</option>
+        </select>
+          <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-goldyellow peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-goldyellow peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-goldyellow peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+            Select a Region
+          </label>
+          </div>
+          <div id="rdbtnreg" class="relative  -mb-2" style="visibility: hidden">
+            <button id="resbtnreg" type="submit" onclick="Origin()" class=" text-black absolute right-2.5 bottom-2.5 bg-goldyellow  hover:bg-yellow-300  font-medium rounded-lg dark:text-backg text-sm px-4 py-2 dark:bg-goldyellow dark:hover:bg-yellow-300">Search</button>
+          </div>
+        </div>
+        <!-- Region Search end -->
+        <!-- Plant type Search -->
+        <div class="flex  space-x-24">
+          <div id="idptdrop" class=" relative h-10 w-72 min-w-[200px]" style="visibility: hidden">
+            <select id="oppt" class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 text-black placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-goldyellow focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+              <option value="aralia">Aralia</option>
+              <option value="bromeliads">Bromeliads</option>
+              <option value="cactusandsucculent">Cactus And Succulent</option>
+              <option value="dracaena">Dracaena </option>
+              <option value="fern">Fern</option>
+              <option value="flower">Flower</option>
+              <option value="foliageplant">Foliage Plant</option>
+              <option value="hanging">Hanging</option>
+              <option value="other">Other</option>
+              <option value="palm">Palm</option>
+              <option value="philodendron">Philodendron</option>
+              <option value="sansevieria">Sansevieria</option>
+              <option value="spathiphyllum">Spathiphyllum</option>
+              <option value="topiairy">Topiairy</option>
+              <option value="aglaonema">Aglaonema</option>
+          </select>
+            <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-goldyellow peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-goldyellow peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-goldyellow peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+              Select a Plant Type
+            </label>
+            </div> 
+            <div id="rdbtnpt" class="relative  -mb-2" style="visibility: hidden">
+              <button id="resbtnpt" type="submit" onclick="Category()" class=" text-black absolute right-2.5 bottom-2.5 bg-goldyellow  hover:bg-yellow-300  font-medium rounded-lg dark:text-backg text-sm px-4 py-2 dark:bg-goldyellow dark:hover:bg-yellow-300">Search</button>
+            </div>
+        </div>
         
-</body>
-<script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+        <!-- Plant type Search -->
+      </div>
+      
+    </div>
+    <div id="resu" class="my-5 flex justify-center mx-auto" style="visibility: hidden">
+      <h1 class="text-slate-950 dark:text-backg font-bold">Results</h1>
+    </div>
+    
+    <div
+      id="div"
+      class="relative m-10  overflow-x-auto shadow-md sm:rounded-lg bg-backg  dark:bg-slate-800 dark:text-backg dark:border-backg"
+      style="visibility: hidden"
+    >
+    
+      <table id="demo" class="styled-table"></table>
+    </div>
+    <script src="./assets/v1.js"></script>
+    <script type="module" src="./assets/signout.js"></script>
+
+    <script>
+      const cli = document.getElementById("idcli");
+      const reg = document.getElementById("idreg");
+      const pt = document.getElementById("idpt");
+
+      const clidrop = document.getElementById("idclidrop");
+      const regdrop = document.getElementById("idregdrop");
+      const ptdrop = document.getElementById("idptdrop");
+
+      const resbtncli = document.getElementById("resbtncli");
+      const rdbtncli = document.getElementById("rdbtncli");
+      const resbtnreg = document.getElementById("resbtnreg");
+      const rdbtnreg = document.getElementById("rdbtnreg");
+      const resbtnpt = document.getElementById("resbtnpt");
+      const rdbtnpt = document.getElementById("rdbtnpt");
+
+      const box = document.getElementById("div");
+      const resu = document.getElementById("resu");
+
+      const opcli = document.getElementById("opcli");
+      const opreg = document.getElementById("opreg");
+      const oppt = document.getElementById("oppt");
+
+
+      cli.addEventListener("click", () => {
+        clidrop.style.visibility = "visible";
+        regdrop.style.visibility = "hidden";
+        ptdrop.style.visibility = "hidden";
+        rdbtnreg.style.visibility = "hidden";
+        rdbtnpt.style.visibility = "hidden";
+        rdbtncli.style.visibility = "visible";
+      });
+      reg.addEventListener("click", () => {
+        regdrop.style.visibility = "visible";
+        clidrop.style.visibility = "hidden";
+        ptdrop.style.visibility = "hidden";
+        rdbtncli.style.visibility = "hidden";
+        rdbtnpt.style.visibility = "hidden";
+        rdbtnreg.style.visibility = "visible";
+      });
+      pt.addEventListener("click", () => {
+        ptdrop.style.visibility = "visible";
+        regdrop.style.visibility = "hidden";
+        clidrop.style.visibility = "hidden";
+        rdbtncli.style.visibility = "hidden";
+        rdbtnreg.style.visibility = "hidden";
+        rdbtnpt.style.visibility = "visible";
+      });
+      resbtncli.addEventListener("click", () => {
+        box.style.visibility = "visible";
+        resu.style.visibility = "visible";
+      });
+      resbtnreg.addEventListener("click", () => {
+        box.style.visibility = "visible";
+        resu.style.visibility = "visible";
+      });
+      resbtnpt.addEventListener("click", () => {
+        box.style.visibility = "visible";
+        resu.style.visibility = "visible";
+      });
+
+
+    </script>
+  </body>
+  <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 </html>
