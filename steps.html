@@ -43,5 +43,10 @@
     </div>
     <script type="module" crossorigin src="./assets/signout.js"></script>
     <script type="module" crossorigin src="./assets/steps.js"></script>
+    <script>
+      function preventBack() { window.history.forward(); }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () { null };
+    </script>
   </body>
 </html>
