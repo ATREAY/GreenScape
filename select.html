@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScape</title>
+    <link rel="icon" href="./images/t_logo.png" type="image/png">
+    <script defer type="module" crossorigin src="./assets/select.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body class="flex flex-col space-y-20">
+    <!--  -->
+    <section class="mx-36 mt-14">
+        <div class="px-12 mx-auto max-w-7xl">
+          <div
+            class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center"
+          >
+            <h1
+              class="mb-5 text-4xl   leading-none tracking-normal text-gray-900 md:text-5xl bg-clip-text py-2  bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent"
+            >
+              <span class="font-bold bg-clip-text leading-12 lg:inline">Hey 
+              </span>
+              <span class="font-bold bg-clip-text leading-12 lg:inline text-black" id="userName"></span><span class="font-bold bg-clip-text leading-12 lg:inline text-black">,</span>
+              <br>
+              <span class="font-bold bg-clip-text leading-12 lg:inline">Welcome to</span>
+              <span class="font-bold text-goldyellow">GreenScape!🌿 </span
+              >
+              </h1>
+            <p
+            class=" text-lg text-gray-600 md:text-xl lg:px-24"
+          >
+          Ready to explore our plant recommendations or dive into our plant care guides? Your choice! 🌱
+          </p>
+  
+            
+          </div>
+        </div>
+      </section>
+      <!--  -->
+ <div class="flex justify-evenly  mt-52 mx-36">
+    <div class="relative  mt-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-gray-light hover:shadow-goldyellow shadow-md hover:shadow">
+        <div class="p-6">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="mb-4 h-12 w-12"  viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M34.049 20.178a6.23 6.23 0 0 1-1 .194v8.613h2v-9.807a6.7 6.7 0 0 1-1 1zM44.341 1.856a19.277 19.277 0 0 0-8.675 2.989 12.736 12.736 0 0 1 2.755 4.762A11.025 11.025 0 0 1 36.6 20.445a9.418 9.418 0 0 0 6.469-3.482c5.266-6.063 1.272-15.107 1.272-15.107z" fill="#d2b356" data-original="#000000" opacity="1" class=""></path><path d="m27.2 9.08 1.778-.917L34.8 19.458a9.077 9.077 0 0 0 1.712-9.246c-2.429-7.658-12.229-8.96-12.229-8.96s-4.62 8.74.212 15.159a9.08 9.08 0 0 0 8.527 3.964zM34.048 20.178h.001l.001-.001zM13.22 39.048l1.369 7.618h38.899l1.369-7.618zM48.21 37.048a16.448 16.448 0 0 0-28.321 0zM50.129 55.81l.486-7.144H17.463l.486 7.144zM18.085 57.81l.335 4.938H49.657l.336-4.938z" fill="#d2b356" data-original="#000000" opacity="1" class=""></path></g></svg>
+            <h5
+                class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+               Plant Recommender
+            </h5>
+            <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                Discover Your Ideal Green Companions with GreenScape's Plant Recommender!
+            </p>
+        </div>
+        <div class="p-6 pt-0">
+            <a class="!font-medium text-goldyellow !transition-colors" href="v1.html">
+                <button
+                    class="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-goldyellow transition-all hover:bg-yellow-500/10 active:bg-yellow-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-dark="true">
+                    Get Started
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" aria-hidden="true" class="h-4 w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="relative mt-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-gray-light hover:shadow-goldyellow shadow-md hover:shadow">
+        <div class="p-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-4 h-12 w-12 " viewBox="0,0,256,256">
+                <g fill="#d2b356" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(256.22422,-0.025) rotate(90) scale(2,2)"><path d="M52.34961,14.40039c-9.725,0 -19.44961,3.69961 -26.84961,11.09961c-14.8,14.8 -14.8,38.89922 0,53.69922c7.4,7.4 17.10039,11.10156 26.90039,11.10156c9.8,0 19.50039,-3.70156 26.90039,-11.10156c14.7,-14.8 14.69844,-38.89922 -0.10156,-53.69922c-7.4,-7.4 -17.12461,-11.09961 -26.84961,-11.09961zM52.30078,20.30078c8.2,0 16.39961,3.09844 22.59961,9.39844c12.5,12.5 12.49961,32.80078 0.09961,45.30078c-12.5,12.5 -32.80078,12.5 -45.30078,0c-12.5,-12.5 -12.5,-32.80078 0,-45.30078c6.2,-6.2 14.40156,-9.39844 22.60156,-9.39844zM52.30078,26.30078c-6.9,0 -13.40078,2.69922 -18.30078,7.69922c-4.7,4.7 -7.29961,10.80039 -7.59961,17.40039c-0.1,1.7 1.20039,2.99961 2.90039,3.09961h0.09961c1.6,0 2.9,-1.30039 3,-2.90039c0.2,-5.1 2.29883,-9.80039 5.79883,-13.40039c3.8,-3.8 8.80156,-5.89844 14.10156,-5.89844c1.7,0 3,-1.3 3,-3c0,-1.7 -1.3,-3 -3,-3zM35,64c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM83.36328,80.5c-0.7625,0 -1.5125,0.30039 -2.0625,0.90039c-1.2,1.2 -1.2,3.09922 0,4.19922l2.5,2.5c-0.6,1.2 -0.90039,2.50039 -0.90039,3.90039c0,2.4 0.89961,4.70039 2.59961,6.40039l12.80078,12.59961c1.8,1.8 4.09844,2.69922 6.39844,2.69922c2.3,0 4.60039,-0.89961 6.40039,-2.59961c3.5,-3.5 3.5,-9.19922 0,-12.69922l-12.79883,-12.80078c-1.7,-1.7 -4.00039,-2.59961 -6.40039,-2.59961c-1.4,0 -2.70039,0.30039 -3.90039,0.90039l-2.5,-2.5c-0.6,-0.6 -1.37422,-0.90039 -2.13672,-0.90039zM91.90039,88.90039c0.8,0 1.59961,0.30039 2.09961,0.90039l12.69922,12.69922c1.2,1.2 1.2,3.09922 0,4.19922c-1.2,1.2 -3.09922,1.2 -4.19922,0l-12.69922,-12.59961c-0.6,-0.6 -0.90039,-1.39922 -0.90039,-2.19922c0,-0.8 0.30039,-1.59961 0.90039,-2.09961c0.6,-0.6 1.29961,-0.90039 2.09961,-0.90039z"></path></g></g>
+                </svg>
+            <h5
+                class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                Plant Care Guide
+            </h5>
+            <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                Nurture Your Plants to Perfection with GreenScape's Plant Care Guide!
+            </p>
+        </div>
+        <div class="p-6 pt-0">
+            <a class="!font-medium text-goldyellow !transition-colors" href="./steps.html">
+                <button
+                    class="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-goldyellow transition-all hover:bg-yellow-500/10 active:bg-yellow-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-dark="true">
+                    Get Started
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" aria-hidden="true" class="h-4 w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+ </div>
+   
+
+
+
+
+
+</body>
+
+</html>
