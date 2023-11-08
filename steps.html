@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XKJYR0327"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6XKJYR0327');
+</script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Scape</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <script type="module" crossorigin src="./assets/steps.js"></script>
+    <script type="module" crossorigin src="./assets/signout.js"></script>
+    <link rel="stylesheet" href="./assets/steps.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="dropdown">
+        <span onclick="myFunction()" class="dropbtn material-symbols-rounded">Face</span>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" id="userName"></a>
+          <a href="#" id="userEmail"></a>
+          <hr>
+          <a href="#" id="userSignOut">Signout</a>
+        </div>
+      </div>
+      <div id="chat_container"></div>
+      <form>
+        <textarea name="prompt" rows="1" cols="1" placeholder="Enter a Plant Name..."></textarea>
+        <button type="submit"><img src="./images/assets/send.svg" alt="send" />
+      </form>
+    </div>
+    <script>
+
+function preventBack() { window.history.forward(); }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () { null };
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+    </script>
+  </body>
+</html>
